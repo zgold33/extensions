@@ -24,23 +24,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        view1.addShadow()
-//        view1.addCornerRadius()
-//        view1.addGradient()
-        configViews()
+
         view.addGradient2()
-//        configLabels()
-        replaceIntoTheString()
+        
+        configViews()
+//        replaceIntoTheString()
         addTextStyles()
         
     }
     
-    func replaceIntoTheString() {
-        let oldString = "im 32 years old"
-        let newString = oldString.replace(target: "32", withString: "37")
-        label1.text = newString
-        label2.text = oldString
-    }
+//    func replaceIntoTheString() {
+//        let oldString = "im 32 years old"
+//        let newString = oldString.replace(target: "32", withString: "37")
+//        label1.text = newString
+//        label2.text = oldString
+//    }
     
     func configViews() {
         let views: [UIView] = [view1, view2, view3]
@@ -50,11 +48,18 @@ class ViewController: UIViewController {
         views.forEach { $0.addBorder() }
     }
     
+//    func addTextStyles() {
+//
+//        let labels: [UILabel] = [label1, label2, label3]
+//
+//        labels.forEach { $0.addTextStyles() }
+//    }
+    
     func addTextStyles() {
         
         let labels: [UILabel] = [label1, label2, label3]
         
-        labels.forEach { $0.addTextStyles() }
+        labels.forEach { $0.configLabel() }
     }
     
 }
