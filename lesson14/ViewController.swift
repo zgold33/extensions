@@ -29,7 +29,9 @@ class ViewController: UIViewController {
         
         configViews()
 //        replaceIntoTheString()
-        addTextStyles()
+//        addTextStyles()
+        
+        label1.text = "R O B O T O  OMFG"
         
     }
     
@@ -61,6 +63,13 @@ class ViewController: UIViewController {
         
         labels.forEach { $0.configLabel() }
     }
+    
+    @IBAction func actionAlert(_ sender: Any) {
+        showOneButtonAlert(withTitle: "bla", message: "bla", action1: "yes")
+        
+  //      (withTitle: "Do you wanna dring?", message: "be smart", action1: "Yes", action2: "No")
+    }
+    
     
 }
 
